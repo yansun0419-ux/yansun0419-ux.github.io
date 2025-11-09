@@ -1,50 +1,26 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navigation from './components/Navigation'
+import Home from './pages/Home'
+import About from './pages/About'
 import './App.css'
 
 /**
  * Main App Component
  * 
  * This is the root component of the personal website.
- * It includes a header, main content area, and footer.
+ * It sets up routing for different pages.
  */
 function App() {
-  // State to track button click count
-  const [count, setCount] = useState(0)
-
-  // Handle button click - increment counter
-  const handleCountIncrement = () => {
-    setCount(count + 1)
-  }
-
   return (
-    <div className="container">
-      {/* Website Header */}
-      <header>
-        <h1>Hello, World!</h1>
-        <p>Welcome to my personal website</p>
-      </header>
-
-      {/* Main Content */}
-      <main>
-        {/* Hero Section */}
-        <section className="hero">
-          <h2>This is my personal homepage</h2>
-          <p>A modern website built with React + TypeScript + Vite</p>
-        </section>
-
-        {/* Interactive Counter Section */}
-        <section className="counter">
-          <button onClick={handleCountIncrement}>
-            Click count: {count}
-          </button>
-        </section>
-      </main>
-
-      {/* Website Footer */}
-      <footer>
-        <p>© 2025 My Personal Website</p>
-      </footer>
-    </div>
+    <Router>
+      <div className="container">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
