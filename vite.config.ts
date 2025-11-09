@@ -18,5 +18,14 @@ export default defineConfig({
   // Build configuration
   build: {
     outDir: 'dist', // Output directory for production build
+    assetsDir: 'assets', // Directory for assets within outDir
+    rollupOptions: {
+      output: {
+        // Ensure proper file extensions for better MIME type detection
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
   },
 })

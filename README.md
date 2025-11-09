@@ -109,27 +109,36 @@ Make sure you have the following installed:
 
 ## 🚀 Deployment
 
-### Deploy to GitHub Pages
+### Deploy to GitHub Pages (Recommended)
 
-1. **Build the project**
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
+#### Setup Instructions:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Set Source to "GitHub Actions"
+
+2. **Push your changes**:
    ```bash
-   npm run build
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
    ```
 
-2. **Deploy using GitHub Actions** (recommended):
-   - Push your changes to the `main` branch
+3. **Automatic Deployment**:
    - GitHub Actions will automatically build and deploy your site
+   - Visit your site at: `https://yourusername.github.io/repository-name/`
 
-3. **Manual deployment**:
+#### Troubleshooting MIME Type Issues:
 
-   ```bash
-   # Install gh-pages (if not already installed)
-   npm install --save-dev gh-pages
-   
-   # Add deploy script to package.json
-   npm run deploy
-   ```
+If you encounter the error: "Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of 'application/octet-stream'", this project includes fixes:
+
+- ✅ `.nojekyll` file to prevent Jekyll processing
+- ✅ Proper Vite configuration for GitHub Pages
+- ✅ GitHub Actions workflow with correct permissions
+- ✅ Proper asset naming for MIME type detection
 
 ### Deploy to Other Platforms
 
