@@ -180,7 +180,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ### yansun0419-ux
 
 - GitHub: [@yansun0419-ux](https://github.com/yansun0419-ux)
-- Website: [yansun0419-ux.github.io](https://yansun0419-ux.github.io/yansun0419-ux.github.io/)
+- Website: [yansun0419-ux.github.io](https://yansun0419-ux.github.io/)
 
 ## 🙏 Acknowledgments
 

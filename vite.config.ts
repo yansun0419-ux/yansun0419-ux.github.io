@@ -13,7 +13,7 @@ export default defineConfig({
   
   // Base path for GitHub Pages deployment
   // Should match your repository name
-  base: '/yansun0419-ux.github.io/',
+  base: '/',
   
   // Build configuration
   build: {
